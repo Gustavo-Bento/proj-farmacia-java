@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +24,7 @@ import com.farmacia.demo.services.ItemService;
  * @version 1.0
  * @since 2024-07-14
  * 
- * Autor: Seu Nome
+ * @author Gustavo Ferreira
  */
 @RestController
 @RequestMapping("/api/items")
@@ -51,6 +52,11 @@ public class ItemController {
     @GetMapping("/{id}")
     public Optional<Item> getItemById(@PathVariable Long id) {
         return itemService.getItemById(id);
+    }
+
+    @PostMapping
+    public Item createItem(@RequestBody Item item){
+        return itemService.createItem(item);
     }
 
     /**
