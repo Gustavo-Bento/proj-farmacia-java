@@ -1,0 +1,6 @@
+com\farmacia\demo\config\DataSourceConfig.class
+com\farmacia\demo\controllers\ItemController.class
+com\farmacia\demo\entities\Item.class
+com\farmacia\demo\services\ItemService.class
+com\farmacia\demo\repositories\ItemRepository.class
+com\farmacia\demo\FarmaciaApplication.class
